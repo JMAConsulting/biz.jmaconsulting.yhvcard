@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/contact/task/cards</path>
+    <page_callback>CRM_Yhvcard_Page_Task_Cards</page_callback>
+    <title>Task_Cards</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
