@@ -61,6 +61,7 @@ abstract class CRM_Yhvcard_Utils {
     $pdf->Write(10, '編號:', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setY($mymargin_top + 18);
     $pdf->setX($mymargin_left + 24);
+    $pdf->SetFont('Calibri', 'b', 15);
     $pdf->Write(10, $pdf_variables['contact_id'], '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setY($mymargin_top + 24);
     $pdf->setX($mymargin_left);
@@ -71,12 +72,15 @@ abstract class CRM_Yhvcard_Utils {
     $pdf->Write(10, '姓名:', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setY($mymargin_top + 24);
     $pdf->setX($mymargin_left + 24);
-    $pdf->Write(10, $pdf_variables['name'], '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
+    $pdf->SetFont('Calibri', 'b', 15);
+    $pdf->Write(10, strtoupper($pdf_variables['name']), '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setY($mymargin_top + 30);
     $pdf->setX($mymargin_left + 24);
+    $pdf->setFont('SimSun', 'b', 15);
     $pdf->write(10, $pdf_variables ['chinese_name'], '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setY($mymargin_top + 44);
     $pdf->setX($mymargin_left);
+    $pdf->SetFont('Calibri', 'b', 10);
     $pdf->Write(10, 'Expiry Date:', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setFont('SimSun', 'b', 10);
     $pdf->setY($mymargin_top + 50);
@@ -97,7 +101,7 @@ For inquiry, please contact Yee Hong Centre for Geriatric Care at (416) 412-4571
     $pdf->SetFont('Calibri', 'b', 10);
     $pdf->SetY($mymargin_top + 50);
     $pdf->setX($rightColumnLeftMargin);
-    $pdf->write(10, 'issued by: ' . $pdf_variables['issued_by'] . '  Date:' . date('M d, Y'), '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
+    $pdf->write(10, 'Issued by: ' . $pdf_variables['issued_by'] . '  Date:' . date('M d, Y'), '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
   }
 
 }

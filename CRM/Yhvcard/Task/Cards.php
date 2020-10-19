@@ -28,7 +28,7 @@ class CRM_Yhvcard_Task_Cards extends CRM_Contact_Form_task {
     $filename = 'cards-to-print-' . (int) $_SERVER['REQUEST_TIME'] . '.pdf';
     $count = 0;
     foreach ($this->_contactIds  as $contactId) {
-      $contact = civicrm_api3('Contact', 'get', ['id' => $contactId, 'return' => ['first_name', 'last_name', 'custom_24']])['values'][$contactId];
+      $contact = civicrm_api3('Contact', 'get', ['id' => $contactId, 'return' => ['first_name', 'last_name', CHINESE_NAME]])['values'][$contactId];
       $loggedInContact = civicrm_api3('Contact', 'getsingle', ['id' => $this->getLoggedInUserContactID()]);
       $mymargin_left = 12;
       $mymargin_top = 6;
@@ -41,7 +41,7 @@ class CRM_Yhvcard_Task_Cards extends CRM_Contact_Form_task {
         'mymargin_top' => $mymargin_top,
         'contact_id' => $contactId,
         'name' => $contact['first_name'] . ' ' . $contact['last_name'],
-        'chinese_name' => $contact['custom_24'],
+        'chinese_name' => $contact[CHINESE_NAME],
         'expiry_date' => date('M d, Y', strtotime('+ 1 year')),
         'issued_by' => $loggedInContact['first_name'] . ' ' . $loggedInContact['last_name'],
       ];
