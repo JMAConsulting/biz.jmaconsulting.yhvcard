@@ -144,7 +144,6 @@ function yhvcard_civicrm_themes(&$themes) {
 }
 
 function yhvcard_civicrm_searchTasks($objectType, &$tasks) {
-  drupal_set_message(json_encode($objectType));
   if ($objectType === 'contact') {
     $tasks[] = [
       'title' => E::ts('Generate Volunteer Cards'),
