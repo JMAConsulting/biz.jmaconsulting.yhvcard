@@ -65,6 +65,7 @@ abstract class CRM_Yhvcard_Utils {
     $pdf->Write(10, $pdf_variables['contact_id'], '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setY($mymargin_top + 24);
     $pdf->setX($mymargin_left);
+    $pdf->SetFont('Calibri', 'b', 10);
     $pdf->Write(10, 'Name.', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setFont('SimSun', 'b', 10);
     $pdf->setY($mymargin_top + 24);
