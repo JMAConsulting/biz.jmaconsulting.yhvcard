@@ -54,7 +54,7 @@ abstract class CRM_Yhvcard_Utils {
     $pdf->Write(10, '頤康中心  義工証', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0);
     $pdf->setY($mymargin_top + 18);
     $pdf->setX($mymargin_left);
-    $pdf->Write(10, 'No.', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
+    $pdf->Write(10, 'No. ', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setFont('SimSun', 'b', 10);
     $pdf->setY($mymargin_top + 18);
     $pdf->setX($mymargin_left + 6);
@@ -66,7 +66,7 @@ abstract class CRM_Yhvcard_Utils {
     $pdf->setY($mymargin_top + 24);
     $pdf->setX($mymargin_left);
     $pdf->SetFont('Calibri', 'b', 10);
-    $pdf->Write(10, 'Name.', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
+    $pdf->Write(10, 'Name', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setFont('SimSun', 'b', 10);
     $pdf->setY($mymargin_top + 24);
     $pdf->setX($mymargin_left + 12);
@@ -82,7 +82,7 @@ abstract class CRM_Yhvcard_Utils {
     $pdf->setY($mymargin_top + 44);
     $pdf->setX($mymargin_left);
     $pdf->SetFont('Calibri', 'b', 10);
-    $pdf->Write(10, 'Expiry Date:', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
+    $pdf->Write(10, 'Expiry Date', '', 0, 'L', TRUE, 0, FALSE, FALSE, 0, 0);
     $pdf->setFont('SimSun', 'b', 10);
     $pdf->setY($mymargin_top + 50);
     $pdf->setX($mymargin_left);
