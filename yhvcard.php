@@ -1,5 +1,5 @@
 <?php
-define('CHINESE_NAME', 'custom_80');
+define('CHINESE_NAME', 'custom_9');
 
 require_once 'yhvcard.civix.php';
 // phpcs:disable
