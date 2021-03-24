@@ -42,7 +42,9 @@ class CRM_Yhvcard_Task_Cards extends CRM_Contact_Form_task {
         'contact_id' => $contactId,
         'name' => $contact['first_name'] . ' ' . $contact['last_name'],
         'chinese_name' => $contact[CHINESE_NAME],
-        'expiry_date' => date('M d, Y', strtotime('+ 1 year')),
+        'expiry_date_year' => date('Y', strtotime('+ 2 year')),
+        'expiry_date_month' => date('m', strtotime('+ 2 year')),
+        'expiry_date_day' => date('d', strtotime('+ 2 year')),
         'issued_by' => $loggedInContact['first_name'] . ' ' . $loggedInContact['last_name'],
       ];
       if ($count === 0) {
